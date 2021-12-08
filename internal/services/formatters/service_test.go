@@ -516,7 +516,7 @@ func TestGetConfigCMDByFileExtension(t *testing.T) {
       fi
   `
 		expectedCmd := `
- 	  cd ` + relativeFilePath + string(os.PathSeparator) + `
+ 	  cd ` + relativeFilePath + `
       if [ -f package-lock.json ]; then
         npm audit --only=prod --json > /tmp/results-ANALYSISID.json 2> /tmp/errorNpmaudit-ANALYSISID
         jq -j -M -c . /tmp/results-ANALYSISID.json
